@@ -35,6 +35,10 @@ public class MyAdapter extends BaseAdapter {
         return 0;
     }
 
+    public void addUser(User user, int pos){
+        list.add(pos,user);
+        notifyDataSetChanged();
+    }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView == null){
